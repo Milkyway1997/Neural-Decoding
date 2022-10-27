@@ -15,6 +15,20 @@ filtering, outliers removal, etc.
 
 'Post_Processing.py' is the library used for creating the graphs for
 evaluating the results we got from ML classifiers, including bar chart, 
-time-series graph, etc. Unfortunately, I can't upload the raw data 
+time-series graph, etc. 
+
+All those jupyter files (ipynb) are the scripts that 
+run all the features written in the libraries.
+
+'pkl' files are some results (a tiny part of all the results we got) after 
+executing all the features from those main libraries,  
+and you can use them to plot some graphs for fun.
+
+Unfortunately, I can't upload the raw data 
 we collected from the experiment we did in August 2021. 
 Therefore, you cannot test all the features using those scripts from scratch yourself.
+
+PS 1: Sorry about the terrible naming and lack of comments. 
+
+PS 2: We are writing an article/thesis related to this research; if we publish the paper
+anywhere, I will put a link here later.
