@@ -1,7 +1,8 @@
 # Neural-Decoding
 
 This neural-decoding project is a research that I had been working on 
-for about a year as my master's thesis topic. 
+for about a year as my master's thesis topic. If you are interested in 
+our research, you can look at the posters in the 'Posters' folder.
 
 The 'nd_lib_v3.py' file is the main library written by me. It contains many features, 
 including feature scaling, data labeling, data splitting, trials averaging, PCA, 
