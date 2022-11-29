@@ -1016,14 +1016,74 @@ class ND:
         model.add(Flatten())
 
         # 3 Full connected layer
-        model.add(Dense(1024, activation=activation))
+        model.add(Dense(512, activation=activation))
         model.add(Dropout(0.5))
-        model.add(Dense(1024, activation=activation))
-        model.add(Dropout(0.5))
+        # model.add(Dense(1024, activation=activation))
+        # model.add(Dropout(0.5))
         if ObjOrCate == 'obj':
             model.add(Dense(6, activation='softmax')) # 6 classes
         elif ObjOrCate == 'cate':
             model.add(Dense(1, activation='sigmoid')) # 2 classes
+
+        # summarize the model
+        print(model.summary())
+        return model
+
+    # Build vgg16 with my own full connected layers.
+    def build_vgg16(self, input_shape, activation='relu', ObjOrCate='obj'):
+        model = Sequential()
+        # Layer 1: Convolutional
+        model.add(Conv2D(input_shape=input_shape, filters=64, kernel_size=(3, 3), padding='same', activation=activation))
+        # Layer 2: Convolutional
+        model.add(Conv2D(filters=64, kernel_size=(3, 3), padding='same', activation=activation))
+        # Layer 3: MaxPooling
+        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+
+        # Layer 4: Convolutional
+        model.add(Conv2D(filters=128, kernel_size=(3, 3), padding='same', activation=activation))
+        # Layer 5: Convolutional
+        model.add(Conv2D(filters=128, kernel_size=(3, 3), padding='same', activation=activation))
+        # Layer 6: MaxPooling
+        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+
+        # Layer 7: Convolutional
+        model.add(Conv2D(filters=256, kernel_size=(3, 3), padding='same', activation=activation))
+        # Layer 8: Convolutional
+        model.add(Conv2D(filters=256, kernel_size=(3, 3), padding='same', activation=activation))
+        # Layer 9: Convolutional
+        model.add(Conv2D(filters=256, kernel_size=(3, 3), padding='same', activation=activation))
+        # Layer 10: MaxPooling
+        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+
+        # Layer 11: Convolutional
+        model.add(Conv2D(filters=512, kernel_size=(3, 3), padding='same', activation=activation))
+        # Layer 12: Convolutional
+        model.add(Conv2D(filters=512, kernel_size=(3, 3), padding='same', activation=activation))
+        # Layer 13: Convolutional
+        model.add(Conv2D(filters=512, kernel_size=(3, 3), padding='same', activation=activation))
+        # Layer 14: MaxPooling
+        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+
+        # Layer 15: Convolutional
+        model.add(Conv2D(filters=512, kernel_size=(3, 3), padding='same', activation=activation))
+        # Layer 16: Convolutional
+        model.add(Conv2D(filters=512, kernel_size=(3, 3), padding='same', activation=activation))
+        # Layer 17: Convolutional
+        model.add(Conv2D(filters=512, kernel_size=(3, 3), padding='same', activation=activation))
+        # Layer 18: MaxPooling
+        model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
+
+        # Layer 19: Flatten
+        model.add(Flatten())
+        # # Layer 20: Fully Connected Layer
+        # model.add(Dense(units=4096, activation=activation))
+        # Layer 21: Fully Connected Layer
+        model.add(Dense(units=512, activation=activation))
+        # Layer 22: Softmax Layer
+        if ObjOrCate == 'obj':
+            model.add(Dense(6, activation='softmax'))  # 6 classes
+        elif ObjOrCate == 'cate':
+            model.add(Dense(1, activation='sigmoid'))  # 2 classes
 
         # summarize the model
         print(model.summary())
