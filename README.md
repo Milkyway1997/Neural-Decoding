@@ -25,8 +25,15 @@ clustering, combination's averaging, etc.
 including Graph Per Window Size, bar chart, MVPA, classifiers 
 comparison, AccPerObj, statistical graph, etc. Like this:
 
+ Example of barchart:
+ 
 ![Object_Classification](https://user-images.githubusercontent.com/73594399/204471918-e019126f-d072-451f-8681-46e18023b68e.png)
 
+ Example of MPVA:
+ 
+ ![MVPA](https://user-images.githubusercontent.com/73594399/204481674-51b3a470-904a-4eae-bee7-d178eaef9cc6.png)
+
+ 
 All those 'ipynb' files are the scripts that conduct some of the specific features written in those libraries. 
 
 Files in the 'saved results' folder are all kinds of classification accuracy after executing some of the functions from the main libraries, and you can use them to plot some graphs for fun.
