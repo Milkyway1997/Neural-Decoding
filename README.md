@@ -5,11 +5,14 @@ This neural-decoding project is a research that I had been working on for about 
 The author of all the scripts except 'WU_MEG_DP.py' is Li Liu.
 
 'nd_lib_v3'
+
 ➢ is the main library for steps before training machine learning models, 
 including feature scaling, data labeling, and data shuffling. 
+
 ➢ is also the library for other procedures that aim to enhance 
 classification accuracy, including Slicing Window, PCA, trials 
 averaging, doubling data, CWT, cross-subjects, etc.
+
 ➢ also contained machine learning/Deep Learning stuff, including different classifiers 
 (SVM, NN, GNB, LDA, RVM), cross-validation, grid search, CNN, etc.
 
