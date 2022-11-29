@@ -23,7 +23,7 @@ clustering, combination's averaging, etc.
 
 'Post_Processing' is another library used for plotting the graphs, 
 including Graph Per Window Size, bar chart, MVPA, classifiers 
-comparison, AccPerObj, statistical graph, etc.
+comparison, AccPerObj, statistical graph, etc. Like this:
 
 ![Object_Classification](https://user-images.githubusercontent.com/73594399/204471918-e019126f-d072-451f-8681-46e18023b68e.png)
 
