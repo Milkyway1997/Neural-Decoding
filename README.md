@@ -1,35 +1,34 @@
 # Neural-Decoding
 
-This neural-decoding project is a research that I had been working on 
-for about a year as my master's thesis topic. If you are interested in 
-our research, you can look at the posters in the 'Posters' folder.
+This neural-decoding project is a research that I had been working on for about a year as my master's thesis topic. If you are interested in our study, you can look at the posters in the 'Posters' folder.
 
-The 'nd_lib_v3.py' file is the main library written by me. It contains many features, 
-including feature scaling, data labeling, data splitting, trials averaging, PCA, 
-feature extraction, training/testing ML models, etc. 
+The author of all the scripts except 'WU_MEG_DP.py' is Li Liu.
 
-On the other hand, Dmitry Patashov created the 'WU_MEG_DP.py' file. 
-He is a post-doctor researcher at Waseda University, 
-and we have been working together for about a year. 
-'WU_MEG_DP' is the library for preprocessing, including epoching, 
-filtering, outliers removal, etc.  
+'nd_lib_v3'
+➢ is the main library for steps before training machine learning models, 
+including feature scaling, data labeling, and data shuffling. 
+➢ is also the library for other procedures that aim to enhance 
+classification accuracy, including Slicing Window, PCA, trials 
+averaging, doubling data, CWT, cross-subjects, etc.
+➢ also contained machine learning/Deep Learning stuff, including different classifiers 
+(SVM, NN, GNB, LDA, RVM), cross-validation, grid search, CNN, etc.
 
-'Post_Processing.py' is the library used for creating the graphs for
-evaluating the results we got from ML classifiers, including bar chart, 
-time-series graph, etc. 
+'WU_MEG_DP.py' was written by Dr. Dmitry Patashov.
+'WU_MEG_DP' is the main library for preprocessing, including 
+filtering, resample, EMD, outlier removal, epoching, flipping, 
+clustering, combination's averaging, etc.
 
-All those jupyter files (ipynb) are the scripts that 
-run all the features written in the libraries.
+'Post_Processing' is another library used for plotting the graphs, 
+including Graph Per Window Size, bar chart, MVPA, classifiers 
+comparison, AccPerObj, statistical graph, etc.
 
-'pkl' files are some results (a tiny part of all the results we got) after 
-executing all the features from those main libraries,  
-and you can use them to plot some graphs for fun.
+![Object_Classification](https://user-images.githubusercontent.com/73594399/204471918-e019126f-d072-451f-8681-46e18023b68e.png)
 
-Unfortunately, I can't upload the raw data 
-we collected from the experiment we did in August 2021. 
-Therefore, you cannot test all the features using those scripts from scratch yourself.
+All those 'ipynb' files are the scripts that conduct some of the specific features written in those libraries. 
+
+Files in the 'saved results' folder are all kinds of classification accuracy after executing some of the functions from the main libraries, and you can use them to plot some graphs for fun.
+
+Unfortunately, due to the size of the raw data, I can't upload the raw data we collected from the experiment conducted in August 2021. Therefore, you can only test some features built for creating graphs using saved results.
 
 PS 1: Sorry about the terrible naming and lack of comments. 
-
-PS 2: We are writing an article/thesis related to this research; if we publish the paper
-anywhere, I will put a link here later.
+PS 2: We are preparing an article/thesis related to this research; if we publish the paper anywhere, I will put a link here later.
